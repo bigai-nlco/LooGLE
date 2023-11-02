@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap link -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> -->
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha1/css/bootstrap.min.css"
+        rel="stylesheet">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Labeling form Question_annotator only</title>
+</head>
+
+<body>
+
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            background-color: #fff;
+            width: 80%;
+            max-width: 900px;
+            margin-top: 20px;
+            /* margin: 0 auto; */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container h3 {
+            margin-top: 50px;
+        }
+
+        .container .btn-link {
+            font-weight: bold;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .container .card {
+            margin-top: 20px;
+
+        }
+
+
+        .container .card .card-body {
+            padding-left: 30px;
+        }
+
+        .container .card .card-body ul {
+            padding-left: 10px;
+        }
+
+
+
+
+        .container h1 {
+            text-align: center;
+            text-transform: capitalize;
+            color: #333;
+        }
+
+        .annotation {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .annotation form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .annotation label {
+            font-weight: bold;
+        }
+
+        .container form {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        .container form .form-control {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .container form .form-control:focus {
+            outline: none;
+            border-color: #333;
+        }
+
+        .container form .form-control.error {
+            border-color: #f00;
+        }
+
+        .container form .error-text {
+            color: #f00;
+            font-size: 12px;
+        }
+
+        .container .btn-custom {
+            width: 30%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            text-transform: capitalize;
+        }
+
+        .container form .removeBtn {
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: 5px;
+            background-color: #333;
+            color: #fff;
+            width: 25px;
+            height: 25px;
+            padding: 0 0 0 0;
+        }
+
+        .container #submitBtn {
+            margin-top: 20px;
+            width: 80%;
+        }
+
+        .container .btn-download {
+            display: block;
+            width: 150px;
+            margin-right: 0px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .container .btn-custom:hover {
+            background-color: #555;
+        }
+
+        .container form .success-text {
+            color: #0f0;
+            font-size: 12px;
+        }
+
+        form input[type="text"],
+        textarea,
+        #sub {
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            text-transform: capitalize;
+            width: 50%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #sub:hover {
+            background-color: #555;
+        }
+
+        /* Success message div  */
+        #successmsg,
+        #errormsg,
+        #submiterrormsg {
+            margin-top: 10px;
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                width: 100%;
+            }
+        }
+    </style>
+    <div class="container">
+        <h1>Long Document Question Answering</h1>
+
+        <h3>Instructions</h3>
+
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0"><a class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#intro"
+                            aria-expanded="true" aria-controls="intro">Task Description</a></h5>
+                </div>
+                <div id="task" class="collapse show" data-parent="#accordion">
+                    <div class="card-body">
+                        <ul>
+                            <li>Answer the given questions and find relevant evidences based on given document.</li>
+                            <li>Capabilities needed: long text undetstanding, information retrieval, reasoning, count, etc. </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0"><a class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#example"
+                            aria-expanded="true" aria-controls="example">Labeling Requirement</a></h5>
+                </div>
+                <div id="requirements" class="collapse show" data-parent="#accordion">
+                    <div class="card-body">
+                        https://docs.qq.com/doc/DSktQQkpiaHhsb2dR
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0"><a class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#example"
+                            aria-expanded="true" aria-controls="example">Example</a></h5>
+                </div>
+                <div id="example" class="collapse show" data-parent="#accordion">
+                    <div class="card-body">
+                        https://docs.google.com/spreadsheets/d/1pRDwm_fUir3waiIqM5eeOIM3Qvp8TKRdQjyAxaWnAf4/edit#gid=1608534459
+                    </div>
+                </div>
+            </div>
+<!--             <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0"><a class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#example"
+                            aria-expanded="true" aria-controls="example">Submission Result Can Be Viewed </a></h5>
+                </div>
+                <div id="example" class="collapse show" data-parent="#accordion">
+                    <div class="card-body">
+                        https://docs.google.com/spreadsheets/d/1G1g9NusX86ylE2xZqSfhx_2FvtwMIyVp5nT-smaYYY8/edit#gid=0
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+        <hr>
+
+        <h3>Annotation Form</h3>
+
+        <div class="annotation">
+
+            <button id="downloadBtn" class="btn btn-custom btn-download" value="Download">Download</button>   
+
+            <form id="submit-to-google-sheet" class="needs-validation">
+                <div class="mb-3 row">
+                    <label for="annotatorId" class="col-sm-3 col-form-label">Annotator: </label>
+                    <input id="annotatorId" type="text" name="A_annotator" placeholder="Your name here..."
+                        maxlength="2000000000000000000" required>
+                </div>
+                <div class="mb-3 row">
+                    <label for="Document_ID" class="col-sm-3 col-form-label">Document ID: </label>
+                    <input id="Document_ID" type="text" name="Document_ID" placeholder="Document ID" maxlength="2000000000000000000" required>
+                </div>
+                <div class="mb-3 row">
+                    <label for="Document_title" class="col-sm-3 col-form-label">Document Title: </label>
+                    <textarea class="col-sm-6" id="Document_title" type="text" name="Document_title" placeholder="Document Title"
+                        rows="2"></textarea>
+                </div>
+
+                <div class="form-disabled">
+                    <div class="mb-3 row">
+                        <label for="Question_ID" class="col-sm-3 col-form-label">Question ID: </label>
+                        <input id="Question_ID" type="text" name="Question_ID" placeholder="Question ID" maxlength="2000000000000000000"
+                             required>
+                    </div>
+
+                    <div class="mb-3 row">
+                        <label for="Question" class="col-sm-3 col-form-label">Question: </label>
+                        <input id="Question" type="text" name="Question" placeholder="Your question here"
+                            maxlength="2000000000000000000"  required>
+                    </div>
+                    
+                    <div class="col-12">
+                        <div class="form-check">
+
+                            <input class="form-check-input" type="checkbox" value="" id="confirmation1">
+                            <label class="form-check-label" for="confirmation1">
+                                <span style="color:#f00">(Check before continue.)</span> I confirm that I have carefully
+                                read
+                                the instructions, examples, the document and the question.
+                            </label>
+                        </div>
+                        <div class="form-check">
+
+                            <input class="form-check-input" type="checkbox" value="" id="confirmation2">
+                            <label class="form-check-label" for="confirmation2">
+                                <span style="color:#f00">(Check before continue.)</span> I confirm that I have fully
+                                understood what the question asks. You can leave the rest empty if you do not understand the
+                                question.
+                            </label>
+                        </div>
+                    </div>
+ 
+
+
+                    <div class="mb-3 row">
+                        <label for="Answer" class="col-sm-3 col-form-label">Answer: </label>
+                        <textarea class="col-sm-6" id="Answer" type="text" name="Answer" placeholder="Your answer here"
+                            rows="2"></textarea>
+                    </div>
+
+                    <div id="evidence">
+                        <div class="mb-3 row" id="EvidenceGroup1">
+                            <label for="Evidence1" class="col-sm-3 col-form-label">Evidence1: </label>
+                            <textarea class="col-sm-6" id="Evidence1" name="Evidence1" aria-label="Evidence1" disabled
+                                required></textarea>
+                            <button id="removeBtn1" class="btn col-sm-1 removeBtn">X</button>
+                        </div>
+                    </div>
+                </div>
+                <button id="addEviBtn" class="btn btn-custom" disabled>Add more evidence</button>
+                <input id="submitBtn" class="btn btn-custom" type="submit" class="btn" value="Submit" disabled>
+            </form>
+        </div>
+
+
+
+        <div id="successmsg" class="alert alert-success" role="alert" style="display: none;">
+            <strong>Success!</strong> Your message has been sent.
+        </div>
+
+        <div id="submiterrormsg" class="alert alert-danger" role="alert" style="display: none;">
+            <strong>Error!</strong> You have to complete all required values before submit.
+        </div>
+
+        <div id="errormsg" class="alert alert-danger" role="alert" style="display: none;">
+            <strong>Error!</strong> There was an error sending your message. Please try again or directly download your
+            response!
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        var numEvidence = 1;
+        var eviId = 1;
+
+        $("#confirmation1").change(function () {
+            if ($("#confirmation1").is(':checked')) {
+                $('.form-disabled input:disabled, .form-disabled select:disabled, .form-disabled textarea:disabled').each(function () {
+                    $(this).removeAttr('disabled');
+                });
+                $('#addEviBtn').removeAttr('disabled');
+                $('#submitBtn').removeAttr('disabled');
+            } else {
+                $('.form-disabled input, .form-disabled select, .form-disabled textarea').each(function () {
+                    $(this).attr('disabled', true);
+                });
+                $('#addEviBtn').attr('disabled', true); $('#submitBtn').attr('disabled', true);
+            }
+        });
+
+        $('#addEviBtn').on('click', e => {
+            e.preventDefault();
+
+            if (numEvidence < 6) {
+                numEvidence = numEvidence + 1;
+                eviId = eviId + 1;
+                console.log(numEvidence);
+
+                var newEvi = "<div class='mb-3 row'>" +
+                    "<label for='Evidence" + eviId.toString() + "' class='col-sm-3 col-form-label'>Evidence" + eviId.toString() + ": </label>" +
+                    "<textarea class='col-sm-6' id='Evidence" + eviId.toString() + "' name='Evidence" + eviId.toString() + "' required></textarea>" +
+                    "<button id='removeBtn" + eviId.toString() + "' class='col-sm-1 removeBtn'>X</button></div>";
+                console.log(newEvi);
+                $("#evidence").append(newEvi);
+
+                $('button[id^=removeBtn]').on('click', function () {
+                    if (numEvidence > 1) {
+                        $(this).parent().remove();
+                        numEvidence = numEvidence - 1;
+                    }
+                    if (numEvidence < 6) {
+                        $('#addEviBtn').removeAttr('disabled');
+                    }
+                })
+
+
+            }
+
+            if (numEvidence >= 6) {
+                $('#addEviBtn').attr('disabled', true);
+            }
+        });
+
+
+        $('button[id^=removeBtn]').on('click', e => {
+            e.preventDefault()
+            if (numEvidence > 1) {
+                $(this).parent().remove();
+                numEvidence = numEvidence - 1;
+            }
+        })
+
+        $('#downloadBtn').on('click', e => {
+            e.preventDefault()
+            var formObj = $('#submit-to-google-sheet').serializeArray();
+            console.log(formObj);
+
+            var jsonObj = {};
+            formObj.forEach((val, key) => jsonObj[key] = val);
+
+            $("<a />", {
+                "download": "form.json",
+                "href": "data:application/json;charset=utf-8," + encodeURIComponent(JSON.stringify(jsonObj)),
+            }).appendTo("body")
+                .click(() => {
+                    $(this).remove()
+                })[0].click();
+
+            // $("#downloadUrl").remove();
+        })
+
+    </script>
+
+    <script>
+        $("#submitBtn").on('click', e => {
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxEPMVwJ1dOsMSA-VWQPylzqNLarQjxxDhMnwfzjx7A6_asRYBzvALjSrI0lvPP-30/exec'
+            const form = document.forms['submit-to-google-sheet'];
+            const successmsg = document.getElementById('successmsg');
+            const errormsg = document.getElementById('errormsg');
+            e.preventDefault()
+            if (form.checkValidity()) {
+                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                    .then(response => {
+                        console.log('Success!', response);
+                        //show success message
+                        $("#successmsg").fadeTo(2000, 500).slideUp(500, function () {
+                            $("#successmsg").slideUp(500);
+                        });
+                        // form.reset();
+                    }
+                    )
+                    .catch(error => {
+                        $("#errormsg").fadeTo(2000, 500).slideUp(500, function () {
+                            $("#errormsg").slideUp(500);
+                        });
+                    })
+                //show error message
+            } else {
+                $("#submiterrormsg").fadeTo(2000, 500).slideUp(500, function () {
+                            $("#submiterrormsg").slideUp(500);
+                        });
+            }
+
+        })
+
+    </script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script> -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0-alpha1/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

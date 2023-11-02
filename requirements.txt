@@ -1,0 +1,16 @@
+datasets==2.14.4
+flash-attn==2.0.8
+GPUtil==1.4.0
+huggingface-hub==0.15.1
+langchain==0.0.300
+llama-index==0.8.29.post1
+numpy==1.24.2
+openai==0.27.2
+rouge-score==0.1.2
+tiktoken==0.5.1
+tokenizers==0.13.3
+tqdm==4.65.0
+transformers==4.30.0
+nltk==3.8.1
+sentence-transformers==2.2.2
+protobuf==3.20.0

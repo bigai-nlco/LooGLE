@@ -1,0 +1,6 @@
+{
+    "shortdep_qa": "Please answer the question based on the long texts below. \n{input}\nQuestion: {Q}\nAnswer: ",
+    "longdep_qa": "Please answer the question based on the long texts below. \n{input}\nQuestion: {Q}\nAnswer: ",
+    "longdep_summarization": "Please generate a summary of the below paper. \n{input}\n Summarization: ",
+    "shortdep_cloze": "Please fill in the clozes based on the given long texts below. Each of the placeholder '<mask-n>' in the question could be an entity of Person, Location or Organiocation. The same masks represent the same entity. Output a json format answer, for example: {{'<mask-0>': 'Bob', '<mask-1>': 'Gorrosion Magazine','<mask-2>': 'Bethel Horizon'}}\n{input}\n Question: {Q} What are the masked entities? \nAnswer:"
+}

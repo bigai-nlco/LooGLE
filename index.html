@@ -1,0 +1,675 @@
+<!DOCTYPE html><html><head>
+      <title>README_v3</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\admin\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.10\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<div align="center" id="title"> <img src="./figs/LooGle_logo.png" width="256px"> </div>
+<h2 align="center">Long Context Generic Language Evaluation benchmark for LLM long context understanding</h2>
+<p align="center">
+    <a href="https://opensource.org/licenses/MIT">
+        <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg">
+    </a>
+    <a href="https://www.python.org/downloads/release/python-380/">
+        <img alt="Documentation" src="https://img.shields.io/badge/Python-3.8+-blue.svg">
+    </a>
+</p>
+<p><img src="figs/overview_page1.png" alt=""></p>
+<p><strong>LooGLE</strong> is a comprehensive evaluation benchmark for LLM long context understanding which contains up-to-date  (all after 2022) and extremely long realistic documents (over 24k tokens per document, many of which exceed 100k words) and 6,000 newly generated questions spanning diverse domains and categories. Details statistics of our dataset can be seen in the table below.</p>
+<p><strong>Short and long dependency tasks  📜</strong>  LooGLE is composed of 7 major tasks to evaluate LLMs' ability to understand both short and long dependency content. We refer to ``long dependency" tasks as those that require the understanding of the inter-dependency across multiple shreds of evidences widely spanning over the entire long text. We delicately design 5 types of long dependency tasks, including comprehension_and_reasoning, computation, timeline reorder, multiple information retrieval, and summarization.</p>
+<p>Specifically, we recruited a group of human annotators to read 145 long documents in our benchmark and manually create 1k+ long dependency Question-Answer (QA) instances, despite the high costs and huge effort involved in this process. These 1k+ high-quality QA pairs are each cross-validated 3 times by 2 annotators, aiming to provide the currently most accurate evaluation of LLMs’ ability on long dependency questions.</p>
+<p><strong>Long context evaluation  📊</strong>  In order to provide more comprehensive and general results, LooGLE not only relies on automatic metrics based on n-gram matching and semantic similarity commonly used in previous benchmarks. Besides, it leverages GPT4-as-judgment and human evaluation to get an overall performance for reference. In the first version, we conduct the evaluation of 8 representative LLMs on LooGLE as the baselines. We specifically select LLMs which have made great effort in addressing the challenge of understanding long contexts by utilizing flash attention, position interpolation, optimized Transformer and finetuning, external memory etc. We will also keep up with the latest releases of long-context understanding LLMs in our benchmarks.</p>
+<p>LooGLE not only provides a systematic and comprehensive evaluation schema on long-context LLMs, but also sheds light on future development of enhanced models towards “true long-context understanding”.</p>
+<br>
+<h2 id="-statistics-of-loogle">📌 <strong>Statistics of LooGLE</strong> </h2>
+<p><img src="figs/table.png" alt=""></p>
+<h2 id="️-table-of-contents">✏️ <strong>Table of Contents</strong> </h2>
+<ul>
+<li><a href="#-statistics-of-loogle">📌 <strong>Statistics of LooGLE</strong></a></li>
+<li><a href="#%EF%B8%8F-table-of-contents">✏️ <strong>Table of Contents</strong></a></li>
+<li><a href="#-capability-leaderboard">🚀 <strong>Capability leaderboard</strong></a></li>
+<li><a href="#-quick-start">💁 <strong>Quick Start</strong></a>
+<ul>
+<li><a href="#step-1-prerequisites"><strong>Step 1. Prerequisites</strong></a></li>
+<li><a href="#step-2-download-the-data"><strong>Step 2. Download the data</strong></a></li>
+<li><a href="#step-3-generate-the-prediction-results"><strong>Step 3. Generate the prediction results</strong></a></li>
+<li><a href="#prediction-for-retrieval-based-methods"><strong>Prediction for retrieval based methods</strong></a></li>
+</ul>
+</li>
+<li><a href="#-evaluation">📊 <strong>Evaluation</strong></a>
+<ul>
+<li><a href="#evaluation-on-timeline-reorder-task"><strong>Evaluation on Timeline reorder task</strong></a></li>
+</ul>
+</li>
+<li><a href="#-main-result-on-short-and-long-dependency-tasks">💡 <strong>Main result on short and long dependency tasks</strong></a>
+<ul>
+<li><a href="#performance-of-the-short-dependency-tasks"><strong>Performance of the short dependency tasks</strong></a></li>
+<li><a href="#performance-of-the-long-dependency-tasks"><strong>Performance of the long dependency tasks</strong></a></li>
+<li><a href="#impact-of-input-length-on-long-dependency-tasks"><strong>Impact of input length on long dependency tasks</strong></a></li>
+</ul>
+</li>
+<li><a href="#-citation">📝 <strong>Citation</strong></a></li>
+<li><a href="#-contacts">📣 <strong>Contacts</strong></a></li>
+</ul>
+<br>
+<h2 id="-capability-leaderboard">🚀 <strong>Capability leaderboard</strong> </h2>
+<p>The overall performance comparisons of different models on different tasks in our dataset are shown in the figure below.</p>
+<p><img src="figs/overview_performance.png" alt=""></p>
+<br>
+<h2 id="-quick-start">💁 <strong>Quick Start</strong> </h2>
+<h3 id="step-1-prerequisites"><strong>Step 1. Prerequisites</strong> </h3>
+<p>Clone this repo and install the dependencies. The test environment is under torch 2.0.1+cu121.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token builtin class-name">cd</span> LooGLE   
+conda create <span class="token parameter variable">-n</span> loogle <span class="token assign-left variable">python</span><span class="token operator">=</span><span class="token number">3.9</span>
+conda activate loogle
+pip <span class="token function">install</span> <span class="token parameter variable">-r</span> requirements.txt
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">OPENAI_API_KEY</span><span class="token operator">=</span><span class="token string">"[your_openai_api_key]"</span>
+</code></pre><h3 id="step-2-download-the-data"><strong>Step 2. Download the data</strong> </h3>
+<p>You can download and load the <strong>LooGLE</strong> data through the Hugging Face datasets (<a href="https://huggingface.co/datasets/bigainlco/LooGLE">🤗 HF Repo</a>):</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-from">from</span> datasets <span class="token keyword keyword-import">import</span> load_dataset
+
+datasets <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"shortdep_qa"</span><span class="token punctuation">,</span> <span class="token string">"shortdep_cloze"</span><span class="token punctuation">,</span> <span class="token string">"longdep_qa"</span><span class="token punctuation">,</span> <span class="token string">"longdep_summarization"</span><span class="token punctuation">]</span>
+
+<span class="token keyword keyword-for">for</span> testset <span class="token keyword keyword-in">in</span> datasets<span class="token punctuation">:</span>
+    data <span class="token operator">=</span> load_dataset<span class="token punctuation">(</span><span class="token string">'bigainlco/LooGLE'</span><span class="token punctuation">,</span> testset<span class="token punctuation">,</span> split<span class="token operator">=</span><span class="token string">'test'</span><span class="token punctuation">)</span>
+    <span class="token comment"># evaluate your model</span>
+</code></pre><p>You can also access our sample data <a href="LooGLE-testdata/">LooGLE-testdata/</a>.</p>
+<p>All data in <strong>LooGLE</strong> are standardized to the following format:</p>
+<pre data-role="codeBlock" data-info="json" class="language-json json"><code><span class="token punctuation">{</span>
+    <span class="token property">"input"</span><span class="token operator">:</span> <span class="token string">"The original long input texts"</span><span class="token punctuation">,</span>
+    <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"The title of the given document"</span><span class="token punctuation">,</span>  <span class="token comment">//for arxiv paper, we use "title" to refer the identical ID for specific paper</span>
+    <span class="token property">"qa_pairs"</span><span class="token operator">:</span><span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">"Q"</span><span class="token operator">:</span> <span class="token string">"Question to ask based on the given input"</span><span class="token punctuation">,</span>
+                <span class="token property">"A"</span><span class="token operator">:</span> <span class="token string">"Groundtruth answer for the question"</span><span class="token punctuation">,</span>
+                <span class="token property">"S"</span><span class="token operator">:</span> <span class="token punctuation">[</span> <span class="token string">"One or more evidence (complete sentences) for answering the question, which are extracted directly from the original input"</span>
+                <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>  
+        <span class="token punctuation">]</span>        <span class="token comment">// There are multiple questions and corresponding answers in the list (each of them is in json format)</span>
+                 <span class="token comment">// For arxiv paper summarization, we use "none" instead for non-qa/non-cloze tasks</span>
+    <span class="token property">"output"</span><span class="token operator">:</span> <span class="token string">"none"</span>   <span class="token comment">// the predicted outputs of LLM given the long input and instructions, which is initialized as "none"</span>
+</code></pre><p>To mention that, in long dependency QA data, we add an extra key <code>type</code> for each question in json to indicate the 4 types of long dependency tasks(apart from summarization): comprehension and reasoning, computation, timeline reorder, multiple information retrieval. Each task of data can be employed to test the specific capability in a long context.</p>
+<br>
+<h3 id="step-3-generate-the-prediction-results"><strong>Step 3. Generate the prediction results</strong> </h3>
+<p>We test LLMs using python codes under the path <a href="Prediction/">Prediction/</a>. There are 3 <code>.py</code> file for corresponding types of models. We use the command below by selecting the model you want to evaluate via <code>--model_name</code> and the specific task via <code>--task</code>. Let's take short dependency QA as an example:</p>
+<p>For GPT-3.5-turbo and GPT4:</p>
+<pre data-role="codeBlock" data-info="" class="language-text text"><code>python Prediction/pred_gpt_models.py  --model_name gpt-3.5-turbo-16k --task shortdep_qa --max_length 500
+</code></pre><p>For LlamaIndex:</p>
+<pre data-role="codeBlock" data-info="" class="language-text text"><code>python Prediction/pred_llamaindex.py --task shortdep_qa --max_length 500
+</code></pre><p>For other open-source models (take chatglm2-6b-32k as an example):</p>
+<pre data-role="codeBlock" data-info="" class="language-text text"><code>python Prediction/pred_opensource_models.py  --model_name chatglm2-6b-32k --task shortdep_qa --max_length 500
+</code></pre><p>Open-source models can be download and loaded from <a href="Models/">Models/</a> by default, you can change the path via <code>--model_path</code></p>
+<p>You can also determine the long texts output result through <code>--output_path</code>.</p>
+<p>Please note that in <code>config/</code>, we provide the prompt format suitable for each task and the maximum generation length. The input parameter <code>--max_length</code> limits the max length of input prompt for selcted model. Feel free to modify them to better suit the model you want to evaluate. After modification, the data will be automatically organized according to the new format to get the corresponding model output.</p>
+<p>We test all the open-source baselines with a single 80G A800 GPU in BF16 precision. If you encounter the OOM problem, please refer to more multiple GPUs inference techniques. For Llama-2 based models, we recommend using Flash Attention for optimization and saving GPU memory The relevant dependencies can be installed according to the code base of <a href="https://github.com/Dao-AILab/flash-attention">Flash Attention</a>.</p>
+<br>
+<h3 id="prediction-for-retrieval-based-methods"><strong>Prediction for retrieval based methods</strong> </h3>
+<p>To evaluate the effectiveness of retrieval techniques for long-context dependency questions, we undertook an extensive experiments by replacing the base LLM model in LlamaIndex with different baseline LLMs.</p>
+<p>For retrieval based methods (take chatglm2-6b-32k as an example):</p>
+<pre data-role="codeBlock" data-info="" class="language-text text"><code>python Retrieval/pred_retrieval_based_method.py --model_name chatglm2-6b-32k --task shortdep_qa --max_length 500 --emb_model_name sentence-transformers/all-mpnet-base-v2
+</code></pre><p>Use <code>--emb_model_name</code> to set embedding models for retrieval based methods. Here we used all-mpnet-base-v2 as default.</p>
+<br>
+<h2 id="-evaluation">📊 <strong>Evaluation</strong> </h2>
+<p>The outputs of different models under LooGLE can be obtained from <code>Output/</code> by default. Given the prediction file generated in Step 2, we run the evaluation code in <a href="Evaluation/">Evaluation/</a>.</p>
+<p>For automatic evaluation in short and long dependency QA, summarization task  (eg. short dependency QA):</p>
+<pre data-role="codeBlock" data-info="" class="language-text text"><code>python Evaluation/automatic_eval.py --model_name chatglm2-6b-32k --task shortdep_qa --eval_metric automatic_sim
+</code></pre><p>For automatic evaluation in cloze task:</p>
+<pre data-role="codeBlock" data-info="" class="language-text text"><code>python Evaluation/automatic_eval.py --model_name chatglm2-6b-32k --task shortdshortdep_cloze --eval_metric automatic_match
+</code></pre><p>For  LLM-as-judge in short and long dependency QA, summarization task (eg. short dependency QA):</p>
+<pre data-role="codeBlock" data-info="" class="language-text text"><code>python Evaluation/llm_eval.py --model_name chatglm2-6b-32k --task shortdep_qa
+</code></pre><p>Besides the parameters specifying the <code>--model_name</code> and <code>--task</code>, we provide <code>--eval_metric</code> for users to choose the method for automic evaluation from [<code>automatic_sim</code>, <code>automatic_match</code>] . Both the automatic metric and LLM-as-judge can be applied in <strong>LooGLE</strong> to provide a more comprehensive assessment.</p>
+<p>Automatic metrics based on semantic similarity matching including Bleu, Rouge, Meteor, Bertscore and exact/partial match are supported. Feel free to add other metrics for your needs in  <a href="Evaluation/automatic_metrics.py">Evaluation/automatic_metrics.py</a></p>
+<p>We also employ GPT4 as judgment since it has shown that the GPT4 evaluator exhibits high consistency with human evaluation as a reliable annotator to some extent. The prompt of GPT4 given in the repo can be altered for further evaluation.</p>
+<br>
+<h3 id="evaluation-on-timeline-reorder-task"><strong>Evaluation on Timeline reorder task</strong> </h3>
+<p>In order to evaluate the performance of time reorder task outputs in a more meaningful way, we provide four metrics: LSD (location square deviation), LMD (location mean deviation), SD<br>
+(swap deviation), and SDD (swap distance deviation) to measure the similarity of numeric sequences. Details of the implementations can be seen in our paper.</p>
+<p>For LLM in long dependency timeline reorder task:</p>
+<pre data-role="codeBlock" data-info="" class="language-text text"><code>python Reorder/automatic_eval.py --model_name chatglm2-6b-32k
+</code></pre><br>
+<h2 id="-main-result-on-short-and-long-dependency-tasks">💡 <strong>Main result on short and long dependency tasks</strong> </h2>
+<h3 id="performance-of-the-short-dependency-tasks"><strong>Performance of the short dependency tasks</strong> </h3>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0lax" rowspan="2">Models </th>
+    <th class="tg-0lax" rowspan="2">Context </th>
+    <th class="tg-0lax" colspan="8">Short dependency QA</th>
+    <th class="tg-0lax" colspan="2">Cloze</th>
+  </tr>
+  <tr>
+    <th class="tg-0lax">Bleu1</th>
+    <th class="tg-0lax"> Bleu4 </th>
+    <th class="tg-0lax">Rouge1 </th>
+    <th class="tg-0lax">Rouge4 </th>
+    <th class="tg-0lax">RougeL </th>
+    <th class="tg-0lax">Meteor score </th>
+    <th class="tg-0lax">Bert score </th>
+    <th class="tg-0lax">GPT4 score </th>
+    <th class="tg-0lax">Exact Match </th>
+    <th class="tg-0lax">Partial Match</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax">GPT4-32k</td>
+    <td class="tg-0lax">32k</td>
+    <td class="tg-0lax">24.61</td>
+    <td class="tg-0lax">11.14</td>
+    <td class="tg-0lax">61.80</td>
+    <td class="tg-0lax">50.73</td>
+    <td class="tg-0lax">60.75</td>
+    <td class="tg-0lax">32.94</td>
+    <td class="tg-0lax">78.72</td>
+    <td class="tg-0lax"><b>71.52</b></td>
+    <td class="tg-0lax"><b>70.50</b></td>
+    <td class="tg-0lax"><b>80.81</b></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">GPT4-8k</td>
+    <td class="tg-0lax">8K</td>
+    <td class="tg-0lax">27.35</td>
+    <td class="tg-0lax">14.38</td>
+    <td class="tg-0lax"><b>67.59</b></td>
+    <td class="tg-0lax"><b>56.01</b></td>
+    <td class="tg-0lax"><b>65.77</b></td>
+    <td class="tg-0lax"><b>38.56</b></td>
+    <td class="tg-0lax"><b>87.93</b></td>
+    <td class="tg-0lax">53.99</td>
+    <td class="tg-0lax">66.03</td>
+    <td class="tg-0lax">76.62</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">GPT3.5-turbo-16k</td>
+    <td class="tg-0lax">16K</td>
+    <td class="tg-0lax">22.67</td>
+    <td class="tg-0lax">9.62</td>
+    <td class="tg-0lax">62.56</td>
+    <td class="tg-0lax">48.63</td>
+    <td class="tg-0lax">60.66</td>
+    <td class="tg-0lax">32.58</td>
+    <td class="tg-0lax">87.04</td>
+    <td class="tg-0lax">66.82</td>
+    <td class="tg-0lax">54.64</td>
+    <td class="tg-0lax">63.42</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">LlamaIndex</td>
+    <td class="tg-0lax">-</td>
+    <td class="tg-0lax"><b>33.37</b></td>
+    <td class="tg-0lax"><b>21.43</b></td>
+    <td class="tg-0lax">58.82</td>
+    <td class="tg-0lax">42.93</td>
+    <td class="tg-0lax">57.08</td>
+    <td class="tg-0lax">37.17</td>
+    <td class="tg-0lax">86.58</td>
+    <td class="tg-0lax">59.61</td>
+    <td class="tg-0lax">58.95</td>
+    <td class="tg-0lax">66.86</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">ChatGLM2-6B</td>
+    <td class="tg-0lax">32k</td>
+    <td class="tg-0lax">14.29</td>
+    <td class="tg-0lax">6.07</td>
+    <td class="tg-0lax">20.50</td>
+    <td class="tg-0lax">13.16</td>
+    <td class="tg-0lax">20.36</td>
+    <td class="tg-0lax">13.08</td>
+    <td class="tg-0lax">87.28</td>
+    <td class="tg-0lax">23.65</td>
+    <td class="tg-0lax">0.05</td>
+    <td class="tg-0lax">0.98</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">LongLLaMa-3B</td>
+    <td class="tg-0lax">256k</td>
+    <td class="tg-0lax">1.37</td>
+    <td class="tg-0lax">0.26</td>
+    <td class="tg-0lax">26.97</td>
+    <td class="tg-0lax">11.02</td>
+    <td class="tg-0lax">26.10</td>
+    <td class="tg-0lax">11.34</td>
+    <td class="tg-0lax">71.65</td>
+    <td class="tg-0lax">13.75</td>
+    <td class="tg-0lax">-</td>
+    <td class="tg-0lax">2.13</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">RWKV-4-14B-pile</td>
+    <td class="tg-0lax">8k</td>
+    <td class="tg-0lax">0.80</td>
+    <td class="tg-0lax">0.04</td>
+    <td class="tg-0lax">21.70</td>
+    <td class="tg-0lax">6.39</td>
+    <td class="tg-0lax">20.64</td>
+    <td class="tg-0lax">9.41</td>
+    <td class="tg-0lax">70.42</td>
+    <td class="tg-0lax">8.93</td>
+    <td class="tg-0lax">-</td>
+    <td class="tg-0lax">-</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">LLaMA2-7B-32K</td>
+    <td class="tg-0lax">32k</td>
+    <td class="tg-0lax">0.18</td>
+    <td class="tg-0lax">7.25*e-308</td>
+    <td class="tg-0lax">1.86</td>
+    <td class="tg-0lax">0.00</td>
+    <td class="tg-0lax">1.86</td>
+    <td class="tg-0lax">1.52</td>
+    <td class="tg-0lax">61.53</td>
+    <td class="tg-0lax">3.18</td>
+    <td class="tg-0lax">-</td>
+    <td class="tg-0lax">0.58</td>
+  </tr>
+</tbody>
+</table>
+<br>
+<h3 id="performance-of-the-long-dependency-tasks"><strong>Performance of the long dependency tasks</strong> </h3>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0lax">Models </th>
+    <th class="tg-0lax">Context </th>
+    <th class="tg-0lax">Bleu1</th>
+    <th class="tg-0lax"> Bleu4 </th>
+    <th class="tg-0lax">Rouge1 </th>
+    <th class="tg-0lax">Rouge4 </th>
+    <th class="tg-0lax">RougeL </th>
+    <th class="tg-0lax">Meteor score </th>
+    <th class="tg-0lax">Bert score </th>
+    <th class="tg-0lax">GPT4 score </th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax" colspan="10">arXiv paper summarization</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">GPT4-32k</td>
+    <td class="tg-0lax">32k</td>
+    <td class="tg-0lax">24.50</td>
+    <td class="tg-0lax">0.73</td>
+    <td class="tg-0lax">27.15</td>
+    <td class="tg-0lax">7.10</td>
+    <td class="tg-0lax">24.25</td>
+    <td class="tg-0lax">19.03</td>
+    <td class="tg-0lax">84.04</td>
+    <td class="tg-0lax">82.84</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">GPT4-8k</td>
+    <td class="tg-0lax">8k</td>
+    <td class="tg-0lax"><b>29.02</b></td>
+    <td class="tg-0lax"><b>2.09</b></td>
+    <td class="tg-0lax"><b>32.08</b></td>
+    <td class="tg-0lax"><b>11.11</b></td>
+    <td class="tg-0lax">28.85</td>
+    <td class="tg-0lax"><b>22.64</b></td>
+    <td class="tg-0lax"><b>84.92</b></td>
+    <td class="tg-0lax">85.42</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">GPT3.5-turbo-16k</td>
+    <td class="tg-0lax">16k</td>
+    <td class="tg-0lax">28.70</td>
+    <td class="tg-0lax">1.59</td>
+    <td class="tg-0lax">32.04</td>
+    <td class="tg-0lax">10.69</td>
+    <td class="tg-0lax"><b>28.89</b></td>
+    <td class="tg-0lax">22.34</td>
+    <td class="tg-0lax">84.82</td>
+    <td class="tg-0lax"><b>86.84</b></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">LlamaIndex</td>
+    <td class="tg-0lax">-</td>
+    <td class="tg-0lax">22.53</td>
+    <td class="tg-0lax">0.63</td>
+    <td class="tg-0lax">26.28</td>
+    <td class="tg-0lax">6.97</td>
+    <td class="tg-0lax">23.73</td>
+    <td class="tg-0lax">21.07</td>
+    <td class="tg-0lax">83.09</td>
+    <td class="tg-0lax">76.35</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">ChatGLM2-6B</td>
+    <td class="tg-0lax">32k</td>
+    <td class="tg-0lax">0.04</td>
+    <td class="tg-0lax">1.60e-310</td>
+    <td class="tg-0lax">5.97</td>
+    <td class="tg-0lax">8.43E-05</td>
+    <td class="tg-0lax">5.82</td>
+    <td class="tg-0lax">6.40</td>
+    <td class="tg-0lax">73.25</td>
+    <td class="tg-0lax">13.23</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">LongLLaMa-3B</td>
+    <td class="tg-0lax">256k</td>
+    <td class="tg-0lax">4.24</td>
+    <td class="tg-0lax">9.32e-309</td>
+    <td class="tg-0lax">4.10</td>
+    <td class="tg-0lax">0.52</td>
+    <td class="tg-0lax">3.86</td>
+    <td class="tg-0lax">3.82</td>
+    <td class="tg-0lax">73.41</td>
+    <td class="tg-0lax">12.28</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">RWKV-4-14B-pile</td>
+    <td class="tg-0lax">8k</td>
+    <td class="tg-0lax">6.28</td>
+    <td class="tg-0lax">4.58E-05</td>
+    <td class="tg-0lax">6.45</td>
+    <td class="tg-0lax">0.74</td>
+    <td class="tg-0lax">6.01</td>
+    <td class="tg-0lax">6.00</td>
+    <td class="tg-0lax">75.28</td>
+    <td class="tg-0lax">7.02</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">LLaMA2-7B-32K</td>
+    <td class="tg-0lax">32k</td>
+    <td class="tg-0lax">0.03</td>
+    <td class="tg-0lax">4.66e-310</td>
+    <td class="tg-0lax">0.12</td>
+    <td class="tg-0lax">0.00</td>
+    <td class="tg-0lax">0.12</td>
+    <td class="tg-0lax">0.67</td>
+    <td class="tg-0lax">71.21</td>
+    <td class="tg-0lax">7.60</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax" colspan="10">Long dependency QA</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">GPT4-32k</td>
+    <td class="tg-0lax">32k</td>
+    <td class="tg-0lax">8.55</td>
+    <td class="tg-0lax">1.40</td>
+    <td class="tg-0lax"><b>25.59</b></td>
+    <td class="tg-0lax">6.36</td>
+    <td class="tg-0lax"><b>24.04</b></td>
+    <td class="tg-0lax"><b>11.13</b></td>
+    <td class="tg-0lax">80.16</td>
+    <td class="tg-0lax"><b>54.09</b></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">GPT4-8k</td>
+    <td class="tg-0lax">8k</td>
+    <td class="tg-0lax"><b>8.94</b></td>
+    <td class="tg-0lax">1.01</td>
+    <td class="tg-0lax">23.45</td>
+    <td class="tg-0lax">6.57</td>
+    <td class="tg-0lax">21.69</td>
+    <td class="tg-0lax">10.18</td>
+    <td class="tg-0lax">85.36</td>
+    <td class="tg-0lax">42.12</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">GPT3.5-turbo-16k</td>
+    <td class="tg-0lax">16k</td>
+    <td class="tg-0lax">6.92</td>
+    <td class="tg-0lax"><b>1.81</b></td>
+    <td class="tg-0lax">25.02</td>
+    <td class="tg-0lax">6.68</td>
+    <td class="tg-0lax">23.63</td>
+    <td class="tg-0lax">10.40</td>
+    <td class="tg-0lax">83.79</td>
+    <td class="tg-0lax">45.04</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">LlamaIndex</td>
+    <td class="tg-0lax">-</td>
+    <td class="tg-0lax">7.76</td>
+    <td class="tg-0lax">1.24</td>
+    <td class="tg-0lax">23.62</td>
+    <td class="tg-0lax"><b>7.10</b></td>
+    <td class="tg-0lax">22.30</td>
+    <td class="tg-0lax">10.47</td>
+    <td class="tg-0lax">83.87</td>
+    <td class="tg-0lax">37.63</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">ChatGLM2-6B</td>
+    <td class="tg-0lax">32k</td>
+    <td class="tg-0lax">5.55</td>
+    <td class="tg-0lax">0.11</td>
+    <td class="tg-0lax">9.41</td>
+    <td class="tg-0lax">1.93</td>
+    <td class="tg-0lax">8.69</td>
+    <td class="tg-0lax">4.39</td>
+    <td class="tg-0lax"><b>85.78</b></td>
+    <td class="tg-0lax">11.50</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">LongLLaMa-3B</td>
+    <td class="tg-0lax">256k</td>
+    <td class="tg-0lax">1.04</td>
+    <td class="tg-0lax">3.12E-307</td>
+    <td class="tg-0lax">2.96</td>
+    <td class="tg-0lax">0.03</td>
+    <td class="tg-0lax">2.71</td>
+    <td class="tg-0lax">1.66</td>
+    <td class="tg-0lax">78.60</td>
+    <td class="tg-0lax">6.48</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">RWKV-4-14B-pile</td>
+    <td class="tg-0lax">8k</td>
+    <td class="tg-0lax">0.71</td>
+    <td class="tg-0lax">9.52E-307</td>
+    <td class="tg-0lax">18.54</td>
+    <td class="tg-0lax">1.55</td>
+    <td class="tg-0lax">17.69</td>
+    <td class="tg-0lax">3.45</td>
+    <td class="tg-0lax">71.36</td>
+    <td class="tg-0lax">5.33</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">LLaMA2-7B-32K</td>
+    <td class="tg-0lax">32k</td>
+    <td class="tg-0lax">0.08</td>
+    <td class="tg-0lax">2.44E-308</td>
+    <td class="tg-0lax">2.05</td>
+    <td class="tg-0lax">0.00</td>
+    <td class="tg-0lax">2.05</td>
+    <td class="tg-0lax">0.46</td>
+    <td class="tg-0lax">50.28</td>
+    <td class="tg-0lax">4.18</td>
+  </tr>
+</tbody>
+</table>
+<br>
+<h3 id="impact-of-input-length-on-long-dependency-tasks"><strong>Impact of input length on long dependency tasks</strong> </h3>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0lax">Models </th>
+    <th class="tg-0lax">Context </th>
+    <th class="tg-0lax">Bleu1</th>
+    <th class="tg-0lax"> Bleu4 </th>
+    <th class="tg-0lax">Rouge1 </th>
+    <th class="tg-0lax">Rouge4 </th>
+    <th class="tg-0lax">RougeL </th>
+    <th class="tg-0lax">Meteor score </th>
+    <th class="tg-0lax">Bert score </th>
+    <th class="tg-0lax">GPT4 score </th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0lax" colspan="10">arXiv paper summarization</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">GPT4-32k</td>
+    <td class="tg-0lax">32k</td>
+    <td class="tg-0lax">24.50</td>
+    <td class="tg-0lax">0.73</td>
+    <td class="tg-0lax">27.15</td>
+    <td class="tg-0lax">7.10</td>
+    <td class="tg-0lax">24.25</td>
+    <td class="tg-0lax">19.03</td>
+    <td class="tg-0lax">84.04</td>
+    <td class="tg-0lax">82.84</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">GPT4-32k</td>
+    <td class="tg-0lax">24k</td>
+    <td class="tg-0lax">25.57</td>
+    <td class="tg-0lax">0.81</td>
+    <td class="tg-0lax">27.61</td>
+    <td class="tg-0lax">7.53</td>
+    <td class="tg-0lax">24.73</td>
+    <td class="tg-0lax">19.86</td>
+    <td class="tg-0lax">84.07</td>
+    <td class="tg-0lax">83.15</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">GPT4-32k</td>
+    <td class="tg-0lax">16k</td>
+    <td class="tg-0lax">24.8</td>
+    <td class="tg-0lax">0.70</td>
+    <td class="tg-0lax">27.29</td>
+    <td class="tg-0lax">7.26</td>
+    <td class="tg-0lax">24.28</td>
+    <td class="tg-0lax">19.12</td>
+    <td class="tg-0lax">84.11</td>
+    <td class="tg-0lax">82.82</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">GPT4-32k</td>
+    <td class="tg-0lax">8k</td>
+    <td class="tg-0lax">26.26</td>
+    <td class="tg-0lax"><b>9.35</b></td>
+    <td class="tg-0lax">27.83</td>
+    <td class="tg-0lax">7.67</td>
+    <td class="tg-0lax">24.74</td>
+    <td class="tg-0lax">20.08</td>
+    <td class="tg-0lax">84.10</td>
+    <td class="tg-0lax">82.75</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">GPT4-8k</td>
+    <td class="tg-0lax">8k</td>
+    <td class="tg-0lax"><b>29.02</b></td>
+    <td class="tg-0lax">2.09</td>
+    <td class="tg-0lax"><b>32.08</b></td>
+    <td class="tg-0lax"><b>11.11</b></td>
+    <td class="tg-0lax"><b>28.85</b></td>
+    <td class="tg-0lax"><b>22.64</b></td>
+    <td class="tg-0lax"><b>84.92</b></td>
+    <td class="tg-0lax"><b>85.42</b></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax" colspan="10">Long dependency QA</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">GPT4-32k</td>
+    <td class="tg-0lax">32k</td>
+    <td class="tg-0lax">7.64</td>
+    <td class="tg-0lax">1.24</td>
+    <td class="tg-0lax">15.53</td>
+    <td class="tg-0lax">4.46</td>
+    <td class="tg-0lax">14.60</td>
+    <td class="tg-0lax">11.12</td>
+    <td class="tg-0lax">86.07</td>
+    <td class="tg-0lax"><b>54.65</b></td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">GPT4-32k</td>
+    <td class="tg-0lax">24k</td>
+    <td class="tg-0lax">8.23</td>
+    <td class="tg-0lax">1.66</td>
+    <td class="tg-0lax">14.92</td>
+    <td class="tg-0lax">4.12</td>
+    <td class="tg-0lax">13.90</td>
+    <td class="tg-0lax">10.60</td>
+    <td class="tg-0lax">86.16</td>
+    <td class="tg-0lax">50.61</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">GPT4-32k</td>
+    <td class="tg-0lax">16k</td>
+    <td class="tg-0lax">8.57</td>
+    <td class="tg-0lax">1.35</td>
+    <td class="tg-0lax">16.21</td>
+    <td class="tg-0lax">4.30</td>
+    <td class="tg-0lax">14.90</td>
+    <td class="tg-0lax"><b>11.91</b></td>
+    <td class="tg-0lax"><b>86.36</b></td>
+    <td class="tg-0lax">47.55</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">GPT4-32k</td>
+    <td class="tg-0lax">8k</td>
+    <td class="tg-0lax">7.46</td>
+    <td class="tg-0lax"><b>1.77</b></td>
+    <td class="tg-0lax">13.75</td>
+    <td class="tg-0lax">5.08</td>
+    <td class="tg-0lax">12.89</td>
+    <td class="tg-0lax">10.01</td>
+    <td class="tg-0lax">85.77</td>
+    <td class="tg-0lax">38.34</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">GPT4-8k</td>
+    <td class="tg-0lax">8k</td>
+    <td class="tg-0lax"><b>8.94</b></td>
+    <td class="tg-0lax">1.01</td>
+    <td class="tg-0lax"><b>23.45</b></td>
+    <td class="tg-0lax"><b>6.57</b></td>
+    <td class="tg-0lax"><b>21.69</b></td>
+    <td class="tg-0lax">10.18</td>
+    <td class="tg-0lax">85.36</td>
+    <td class="tg-0lax">42.12</td>
+  </tr>
+</tbody>
+</table>
+<br>
+<h2 id="-citation">📝 <strong>Citation</strong> </h2>
+<p>If you would like to use our data or find our work interesting, please cite:</p>
+<pre data-role="codeBlock" data-info="bibtex" class="language-bibtex bibtex"><code>@article{li2023loogle,
+  title={Can Long-Context Language Models Understand Long Contexts?},
+  author={ Li, Jiaqi and Wang, Mengmeng and Zheng, Zilong and Zhang, Muhan },
+  url={https://github.com/bigai-nlco/LooGLE}
+  year={2023}
+}
+</code></pre><h2 id="-contacts">📣 <strong>Contacts</strong> </h2>
+<p>We sincerely appreciate human annotators for their valuable contributions to creating high-quality long-dependency QA tasks.<br>
+We are very pleased to answer any questions about LooGLE: <a href="mailto:nlp@bigai.ai">nlp@bigai.ai</a></p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
