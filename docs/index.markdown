@@ -36,14 +36,12 @@ LooGLE not only provides a systematic and comprehensive evaluation schema on lon
 - [📝 **Citation**](#-citation)
 - [📣 **Contacts**](#-contacts)
 
-<br>
 
 ## 🚀 **Capability leaderboard**
 The overall performance comparisons of different models on different tasks in our dataset are shown in the figure below.
 
 ![](https://github.com/bigai-nlco/LooGLE/raw/main/assets/overview_performance.png)
 
-<br>
 
 ## 💁 **Quick Start**
 ### **Step 1. Prerequisites**
@@ -90,7 +88,6 @@ All data in **LooGLE** are standardized to the following format:
 ```
 To mention that, in long dependency QA data, we add an extra key `type` for each question in json to indicate the 4 types of long dependency tasks(apart from summarization).
 
-<br>
 
 ### **Step 3. Generate the prediction results**
 We test LLMs using 3 python codes under the path [Prediction/](Prediction/) for corresponding types of models. We select the model for evaluation via `--model_name` and the specific task via `--task`. Let's take short dependency QA as an example:
@@ -118,7 +115,6 @@ Please note that in `config/`, we provide the prompt format suitable for each ta
 
 We test all the open-source baselines with a single 80G A800 GPU in BF16 precision. For Llama-2 based models, we recommend using [Flash Attention](https://github.com/Dao-AILab/flash-attention) for optimization and saving GPU memory.
 
-<br>
 
 ### **Prediction for retrieval based methods**
 
@@ -130,7 +126,6 @@ python Retrieval/pred_retrieval_based_method.py --model_name chatglm2-6b-32k --t
 ```
 Use `--emb_model_name` to set embedding models for retrieval based methods. Here we used all-mpnet-base-v2 as default.
 
-<br>
 
 ## 📊 **Evaluation**
 
@@ -158,7 +153,6 @@ Besides the parameters specifying the `--model_name` and `--task`, we provide `-
 
 Automatic metrics based on semantic similarity matching including Bleu, Rouge, Meteor, Bertscore and exact/partial match are supported. Feel free to add other metrics for your needs in  [Evaluation/automatic_metrics.py](Evaluation/automatic_metrics.py). Besides, the prompt of GPT4 given in the repo can be altered for further evaluation.
 
-<br>
 
 ### **Evaluation on Timeline reorder task**
  We provide four metrics: LSD (location square deviation), LMD (location mean deviation), SD
@@ -169,7 +163,6 @@ For LLM in long dependency timeline reorder task:
 python Reorder/automatic_eval.py --model_name chatglm2-6b-32k
 ```
 
-<br>
 
 ## 💡 **Main result on short and long dependency tasks**
 
@@ -680,7 +673,6 @@ python Reorder/automatic_eval.py --model_name chatglm2-6b-32k
   </tr>
 </tbody>
 </table>
-<br>
 
 <!-- ## 📝 **Tools**
 Here is an example for our annotation websit for long dependency QA task.
