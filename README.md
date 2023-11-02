@@ -1,16 +1,19 @@
-<div align="center" id="title"> <img src="./figs/LooGle_logo.png" width=256px /> </div>
+<div align="center" id="title"> <img src="./assets/LooGle_logo.png" width=256px /> </div>
 
 <h2 align="center">Long Context Generic Language Evaluation benchmark for LLM long context understanding</h2>
 <p align="center">
     <a href="https://opensource.org/licenses/MIT">
         <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg">
     </a>
+    <a href="https://huggingface.co/datasets/bigainlco/LooGLE">
+        <img alt="Documentation" src="https://img.shields.io/badge/Dataset-HF Data-yellow.svg">
+    </a>
     <a href="https://www.python.org/downloads/release/python-380/">
         <img alt="Documentation" src="https://img.shields.io/badge/Python-3.8+-blue.svg">
     </a>
 </p>
 
-![](figs/overview_page1.png)
+![](assets/overview_page1.png)
 
 **LooGLE** is a comprehensive evaluation benchmark for LLM long context understanding which contains up-to-date  (all after 2022) and extremely long realistic documents (over 24k tokens per document, many of which exceed 100k words) and 6,000 newly generated questions spanning diverse domains and categories. Details statistics of our dataset can be seen in the table below.
 
@@ -24,7 +27,7 @@ LooGLE not only provides a systematic and comprehensive evaluation schema on lon
 
 ## 📌 **Statistics of LooGLE**
 
-![](figs/table.png)
+![](assets/table.png)
 
 ## ✏️ **Table of Contents**
 - [📌 **Statistics of LooGLE**](#-statistics-of-loogle)
@@ -49,7 +52,7 @@ LooGLE not only provides a systematic and comprehensive evaluation schema on lon
 ## 🚀 **Capability leaderboard**
 The overall performance comparisons of different models on different tasks in our dataset are shown in the figure below.
 
-![](figs/overview_performance.png)
+![](assets/overview_performance.png)
 
 <br>
 
@@ -697,15 +700,15 @@ Here is an example for our annotation websit for long dependency QA task.
 ## 📝 **Citation**
 If you would like to use our data or find our work interesting, please cite:
 ```bibtex
-@article{li2023loogle,
+@misc{li2023loogle,
   title={Can Long-Context Language Models Understand Long Contexts?},
   author={ Li, Jiaqi and Wang, Mengmeng and Zheng, Zilong and Zhang, Muhan },
-  url={https://github.com/bigai-nlco/LooGLE}
+  url={https://github.com/bigai-nlco/LooGLE},
   year={2023}
 }
 ```
 
 ## 📣 **Contacts**
 
-We sincerely appreciate human annotators for their valuable contributions to creating high-quality long-dependency QA tasks.
-We are very pleased to answer any questions about LooGLE: nlp@bigai.ai
+We sincerely appreciate human annotators for their valuable contributions on creating high-quality long-dependency QA tasks.
+We are very pleased to answer any questions about LooGLE: [nlp@bigai.ai](mailto:nlp@bigai.ai)
