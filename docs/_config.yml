@@ -8,7 +8,7 @@ title: LooGLE Benchmark
 email: nlp@bigai.ai
 description: >- # this means to ignore newlines until "baseurl:"
   Long Context Generic Language Evaluation Benchmark for LLM Long Context Understanding
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://bigai-nlco.github.io/LooGLE" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  bigai-nlco
 dataset_link: https://huggingface.co/datasets/bigainlco/LooGLE
