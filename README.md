@@ -11,10 +11,9 @@
     <a href="https://www.python.org/downloads/release/python-380/">
         <img alt="Documentation" src="https://img.shields.io/badge/Python-3.8+-blue.svg">
     </a>
-    <a href="https://github.com/bigai-nlco/LooGLE/">
+    <a href="https://bigai-nlco.github.io/LooGLE/">
         <img alt="Documentation" src="https://img.shields.io/badge/Website-Page-red.svg">
     </a>
-
 </p>
 
 ![](assets/overview_page1.png)
@@ -23,7 +22,7 @@
 
 **Short and long dependency tasks  📜**  LooGLE is composed of 7 major tasks to evaluate LLMs' ability to understand both short and long dependency content. We refer to ``long dependency" tasks as those that require the understanding of the inter-dependency across multiple shreds of evidence widely spanning over the entire long text. We delicately design 5 types of long dependency tasks, including comprehension and reasoning, computation, timeline reorder, multiple information retrieval, and summarization.
 
-**Long context evaluation  📊**  In order to provide more comprehensive and general results, LooGLE relies on automatic metrics based on semantic similarity, GPT4-as-judgment and human evaluation to get an overall performance for reference. We conduct the evaluation of 8 representative LLMs. We specifically select LLMs which have made great effort in addressing the challenge of understanding long contexts by utilizing flash attention, position interpolation, optimized Transformer and finetuning, external memory etc. 
+**Long context evaluation  📊**  In order to provide more comprehensive and general results, LooGLE relies on automatic metrics based on semantic similarity, GPT4-as-judgment and human evaluation to get an overall performance for reference. We conducted the evaluation of 8 representative LLMs. We specifically select LLMs which have made great effort in addressing the challenge of understanding long contexts by utilizing flash attention, position interpolation, optimized Transformer and finetuning, external memory etc. 
 
 LooGLE not only provides a systematic and comprehensive evaluation schema on long-context LLMs, but also sheds light on the future development of enhanced models toward “true long-context understanding”.
 
