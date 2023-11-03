@@ -16,6 +16,10 @@ LooGLE not only provides a systematic and comprehensive evaluation schema on lon
 
 ## 📌 **Statistics of LooGLE**
 
+<!-- | DataSet | Category | No. Documents | Avg. Words | Task | Subtask | No. Questions |
+|:---------:|:----------:|:---------------:|:-----:|:-----:|:-----:|:-----:|
+| arXiv papers     |  Physics, Math, <br> Finance, Statistics  <br> Biology, Economics, <br> Computer Science, etc.   |516 | 14,860 | Summarization | - | 516 | -->
+
 ![](https://github.com/bigai-nlco/LooGLE/raw/main/assets/table.png)
 
 ## ✏️ **Table of Contents**
