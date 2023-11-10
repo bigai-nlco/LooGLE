@@ -8,11 +8,11 @@
     <a href="https://huggingface.co/datasets/bigainlco/LooGLE">
         <img alt="Documentation" src="https://img.shields.io/badge/Dataset-HF Data-yellow.svg">
     </a>
-    <a href="https://www.python.org/downloads/release/python-380/">
-        <img alt="Documentation" src="https://img.shields.io/badge/Python-3.8+-blue.svg">
-    </a>
     <a href="https://bigai-nlco.github.io/LooGLE/">
         <img alt="Documentation" src="https://img.shields.io/badge/Website-Page-red.svg">
+    </a>
+    <a href="https://arxiv.org/abs/2311.04939">
+        <img alt="Documentation" src="https://img.shields.io/badge/Paper-arXiv-red.svg">
     </a>
 </p>
 
