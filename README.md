@@ -158,7 +158,7 @@ For  LLM-as-judge in short and long dependency QA, summarization task (eg. short
 python Evaluation/llm_eval.py --model_name chatglm2-6b-32k --task shortdep_qa
 ```
 
-Besides the parameters specifying the `--model_name` and `--task`, we provide `--eval_metric` for users to choose the method for automic evaluation from [`automatic_sim`, `automatic_match`]. 
+Besides the parameters specifying the `--model_name` and `--task`, we provide `--eval_metric` for users to choose the method for automatic evaluation from [`automatic_sim`, `automatic_match`]. 
 
 Automatic metrics based on semantic similarity matching including Bleu, Rouge, Meteor, Bertscore and exact/partial match are supported. Feel free to add other metrics for your needs in  [Evaluation/automatic_metrics.py](Evaluation/automatic_metrics.py). Besides, the prompt of GPT4 given in the repo can be altered for further evaluation.
 
