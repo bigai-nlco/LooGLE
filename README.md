@@ -172,16 +172,16 @@ python Reorder/automatic_eval.py --model_name chatglm2-6b-32k
 ```
 
 <!-- ## 📝 **Tools**
-Here is an example for our annotation websit for long dependency QA task.
+Here is an example of our annotation website for long-dependency QA tasks.
 <br> -->
 
 ## 📝 **Citation**
 If you would like to use our data or find our work interesting, please cite:
 ```bibtex
-@misc{li2023loogle,
-  title={Can Long-Context Language Models Understand Long Contexts?},
-  author={ Li, Jiaqi and Wang, Mengmeng and Zheng, Zilong and Zhang, Muhan },
-  url={https://github.com/bigai-nlco/LooGLE},
+@article{li2023loogle,
+  title={LooGLE: Can Long-Context Language Models Understand Long Contexts?},
+  author={Li, Jiaqi and Wang, Mengmeng and Zheng, Zilong and Zhang, Muhan},
+  journal={arXiv preprint arXiv:2311.04939},
   year={2023}
 }
 ```
