@@ -71,7 +71,7 @@ def get_pred(model, data_instance, tokenizer, max_length, max_gen, prompt_format
         pred = rsp['choices'][0]['message']['content']
 
         ans.append(pred)
-        groundtruth.append(raw_inputs)
+        groundtruth.append(data_instance["output"])
 
     else:
         preds['qa_pairs'] = eval(data_instance['qa_pairs'])

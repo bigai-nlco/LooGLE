@@ -60,7 +60,7 @@ def get_pred(model, data_instance, tokenizer, max_length, max_gen, prompt_format
         pred = tokenizer.decode(output[context_length:], skip_special_tokens=True)
 
         ans.append(pred)
-        groundtruth.append(raw_inputs)
+        groundtruth.append(data_instance["output"])
 
     else:
         preds['qa_pairs'] = eval(data_instance['qa_pairs'])
