@@ -44,35 +44,33 @@ def get_bertscore(question, reference, hypothesis, task):
 
 def get_exact_match(question, reference, hypothesis, task):
     count = len(reference)
-    exact_score_count = 0
     if type(hypothesis) is str:
         try:
             hypothesis = eval(hypothesis)
+            assert isinstance(hypothesis, dict)
         except Exception as e:
-            return exact_score_count, count
-    for key in reference.keys():
-        true_an = reference[key]
-        if key in hypothesis.keys() and hypothesis[key] == true_an:
+            return 0, count
+    
+    exact_score_count = 0
+    for key in reference:
+        if key in hypothesis and hypothesis[key] == reference[key]:
             exact_score_count += 1
     return exact_score_count, count
 
-
 def get_partial_match(question, reference, hypothesis, task):
-    count = 0
-    partial_score_count = 0
-    if type(hypothesis) is str:
+    count = len(reference)
+    if isinstance(hypothesis, str):
         try:
             hypothesis = eval(hypothesis)
+            assert isinstance(hypothesis, dict)
         except Exception as e:
-            return partial_score_count, count
+            return 0, count
 
-    for key in reference.keys():
-        count += 1
-        true_an = reference[key]
-        if key in hypothesis.keys():
-            pred_an = hypothesis[key]
-            true_set = set(true_an.split(" "))
-            pred_set = set(pred_an.split(" "))
-            if len(true_set.intersection(pred_set)) != 0:
-                partial_score_count += 1
+    partial_score_count = 0
+    for key in reference:
+        if key in hypothesis:
+            true_set = set(reference[key].split())
+            pred_set = set(hypothesis[key].split())
+            partial_score_count += int(len(true_set.intersection(pred_set)) > 0)
     return partial_score_count, count
+
