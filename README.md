@@ -189,4 +189,4 @@ If you would like to use our data or find our work interesting, please cite:
 ## 📣 **Contacts**
 
 We sincerely appreciate human annotators for their valuable contributions on creating high-quality long-dependency QA tasks.
-We are very pleased to answer any questions about LooGLE: [nlp@bigai.ai](mailto:lijiaqi@bigai.ai)
+We are very pleased to answer any questions about LooGLE: [lijiaqi@bigai.ai](mailto:lijiaqi@bigai.ai)
